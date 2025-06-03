@@ -84,7 +84,7 @@ span.highlight {
 /* Style the header links */
 .header a {
   float: left;
-  /*color: #0099cc;*/
+  color: SteelBlue;
   text-align: center;
   padding: 12px;
   text-decoration: none;
