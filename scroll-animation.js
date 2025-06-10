@@ -1,6 +1,6 @@
 // scroll-animation.js
 
-const frameCount = 300;
+const frameCount = 100;
 const canvas = document.getElementById("animationCanvas");
 const context = canvas.getContext("2d");
 

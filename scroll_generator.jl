@@ -94,14 +94,14 @@ function run()
     x, y, z = wormhole_wriggly()
 
 
-    fig = Figure(size=(600, 600), backgroundcolor=:cornsilk)
+    fig = Figure(size=(1200, 1200), backgroundcolor=:cornsilk)
     lscene = LScene(fig[1, 1], show_axis=false)
     wireframe!(lscene, x, y, z, color=:black, linewidth=1.0)
 
     frame_dir = "frames"
     isdir(frame_dir) || mkdir(frame_dir)
 
-    n_frames = 300
+    n_frames = 100
 
     pattern   = joinpath("frames", "frame")   # no extension here!
 
