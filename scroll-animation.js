@@ -7,7 +7,7 @@ const context = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const currentFrame = index => `frames/frame${String(index).padStart(3, '0')}.png`;
+const currentFrame = index => `.frames/frame${String(index).padStart(3, '0')}.png`;
 
 // Preload images
 const images = [];
