@@ -49,3 +49,25 @@ canvas {
   display: block;
   pointer-events: none;
 }
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-left, .nav-right {
+    gap: 0.5rem;
+  }
+
+  .nav-left a, .nav-right a {
+    font-size: 1rem;
+  }
+}

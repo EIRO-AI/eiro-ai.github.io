@@ -1,13 +1,14 @@
 // scroll-animation.js
 
-const frameCount = 100;
+const frameCount = 50;
+const scrollLoops = 3;
 const canvas = document.getElementById("animationCanvas");
 const context = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const currentFrame = index => `frames/frame_${String(index).padStart(3, '0')}.png`;
+const currentFrame = index => `frames/frame_${String(index).padStart(3, '0')}.svg`;
 
 // Preload images
 const images = [];
@@ -37,7 +38,8 @@ function drawFrame(index) {
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
   const maxScrollTop = document.body.scrollHeight - window.innerHeight;
-  const scrollFraction = scrollTop / maxScrollTop;
+  const scrollFraction = (scrollLoops*scrollTop / maxScrollTop % 1)
+
   const frameIndex = Math.min(
     frameCount,
     Math.ceil(scrollFraction * frameCount)
