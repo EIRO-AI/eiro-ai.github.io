@@ -1,11 +1,11 @@
-using GLMakie
-#using CairoMakie
+#using GLMakie
+using CairoMakie
 using FileIO
 using Printf
 using LinearAlgebra
 using Infiltrator
 
-function wormhole_wriggly(b0=1.0, rmax=4.0; nr=40, nθ=35, twist_amp=0.15, z_wiggle=0.35)
+function wormhole_wriggly(b0=1.0, rmax=4.0; nr=20, nθ=35, twist_amp=0.15, z_wiggle=0.35)
     r = LinRange(b0, rmax, nr)
     θ = LinRange(0, 2π, nθ)
 
@@ -66,13 +66,13 @@ function run()
     frame_dir = "frames"
     isdir(frame_dir) || mkdir(frame_dir)
 
-    n_frames = 50
+    n_frames = 100
     pattern = joinpath("frames", "frame")   # no extension here!
 
     for i in 1:n_frames
         lookat, pos, up = flythrough_cylinder(i, n_frames)
         update_cam!(ax.scene, pos, lookat)
-        fname = joinpath("frames", @sprintf("frame_%03d.svg", i))
+        fname = joinpath("frames", @sprintf("frame_%03d.png", i))
         save(fname, fig, update=false)
     end
 

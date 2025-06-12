@@ -1,6 +1,6 @@
 // scroll-animation.js
 
-const frameCount = 50;
+const frameCount = 100;
 const scrollLoops = 3;
 const canvas = document.getElementById("animationCanvas");
 const context = canvas.getContext("2d");
@@ -12,7 +12,7 @@ const rect = canvas.getBoundingClientRect();
 canvas.width = rect.width;
 canvas.height = rect.height;
 
-const currentFrame = index => `frames/frame_${String(index).padStart(3, '0')}.svg`;
+const currentFrame = index => `frames/frame_${String(index).padStart(3, '0')}.png`;
 
 // Preload images
 const images = [];
