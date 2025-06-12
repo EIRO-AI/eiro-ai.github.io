@@ -21,6 +21,19 @@ header {
     z-index: 1000;
 }
 
+main {
+    top: 55px;
+    height: 400px;
+    margin: auto;
+    color: SteelBlue;
+    font-family: Roboto, sans-serif;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+}
+
 
 .nav-left, .nav-right {
     display: flex;
