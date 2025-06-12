@@ -5,8 +5,12 @@ const scrollLoops = 3;
 const canvas = document.getElementById("animationCanvas");
 const context = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+//canvas.width = window.innerWidth;
+//canvas.height = window.innerHeight;
+
+const rect = canvas.getBoundingClientRect();
+canvas.width = rect.width;
+canvas.height = rect.height;
 
 const currentFrame = index => `frames/frame_${String(index).padStart(3, '0')}.svg`;
 
