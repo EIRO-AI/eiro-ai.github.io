@@ -12,23 +12,11 @@ const rect = canvas.getBoundingClientRect();
 canvas.width = rect.width;
 canvas.height = rect.height;
 
+
 const currentFrame = index => `frames/frame_${String(index).padStart(3, '0')}.svg`;
 
-// Preload images
 const images = [];
 let loadedImages = 0;
-
-
-
-for (let i = 1; i <= frameCount; i++) {
-  const img = new Image();
-  img.src = currentFrame(i);
-  img.onload = () => {
-    loadedImages++;
-    if (loadedImages === 1) drawFrame(1); // Draw the first frame early
-  };
-  images.push(img);
-}
 
 function drawFrame(index) {
   const img = images[index - 1];
@@ -40,6 +28,22 @@ function drawFrame(index) {
   const y = (canvas.height / 2) - (img.height / 2) * scale;
   context.drawImage(img, x, y, img.width * scale, img.height * scale);
 }
+
+// Step 1: Load only the first frame
+const firstImage = new Image();
+firstImage.src = currentFrame(1);
+firstImage.onload = () => {
+  images[0] = firstImage;
+  drawFrame(1);
+
+  // Step 2: Preload the rest
+  for (let i = 2; i <= frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
+    img.onload = () => loadedImages++;
+    images[i - 1] = img;
+  }
+};
 
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
