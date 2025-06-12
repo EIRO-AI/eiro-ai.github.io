@@ -12,11 +12,13 @@ const rect = canvas.getBoundingClientRect();
 canvas.width = rect.width;
 canvas.height = rect.height;
 
-const currentFrame = index => `frames/frame_${String(index).padStart(3, '0')}.png`;
+const currentFrame = index => `frames/frame_${String(index).padStart(3, '0')}.svg`;
 
 // Preload images
 const images = [];
 let loadedImages = 0;
+
+
 
 for (let i = 1; i <= frameCount; i++) {
   const img = new Image();

@@ -72,7 +72,7 @@ function run()
     for i in 1:n_frames
         lookat, pos, up = flythrough_cylinder(i, n_frames)
         update_cam!(ax.scene, pos, lookat)
-        fname = joinpath("frames", @sprintf("frame_%03d.png", i))
+        fname = joinpath("frames", @sprintf("frame_%03d.svg", i))
         save(fname, fig, update=false)
     end
 
