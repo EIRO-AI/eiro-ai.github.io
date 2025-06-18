@@ -23,14 +23,14 @@ header {
 
 main {
     top: 55px;
-    height: 400px;
+    /*min-height: calc(100vh - 55px);*/
     margin: auto;
     color: SteelBlue;
     font-family: Roboto, sans-serif;
     justify-content: center;
     text-align: center;
     align-items: center;
-    display: flex;
+    display: block;
     font-size: 1.2rem;
 }
 
@@ -48,9 +48,12 @@ main {
 
 #canvas-container {
     top: 55px;
+    left: 0;
+    right: 0;
     position: fixed;
-    height: calc(100vh - 55px);
+    max-height: calc(100vh - 55px);
     width: 100%;
+    aspect-ratio: 1.5555;
     margin: auto;
     z-index: 0;
     display: block;
@@ -60,13 +63,99 @@ main {
 }
 
 canvas {
-    aspect-ratio: 1.5555;
-    max-width: 100%;
+    width: 100%;
     padding: 0;
     height: 100%;
     display: block;
     pointer-events: none;
     margin: auto;
+}
+
+.team-wrapper {
+    max-width: 1200px;
+    margin: 55px auto 0;   /* center horizontally, sit just under header */
+    padding: 0 2rem;
+    background-color: transparent;
+    overflow-y: auto;
+    align-items: flex-start;
+}
+
+.team-section {
+    background-color: transparent;
+    padding: 5px; 
+    width: 100%;
+    top: 0;
+}
+
+.team-section h1,
+.affiliate-section h1,
+.join-section h1 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-family: Roboto, sans-serif;
+    margin: 3rem 0 1.5rem;
+    text-align: center;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card h2 { 
+    font-size: 1.2rem; 
+    font-weight: normal;
+    margin: 0.5rem 0 0; 
+}
+.role { 
+    font-size: 0.8rem; 
+    font-weight: normal; 
+    margin: 0.25rem 0 0.75rem; 
+}
+.bio { 
+    font-size: 0.8rem; 
+    margin-bottom: 1rem; 
+}
+.social { 
+    text-decoration: none; 
+    font-size: 0.8rem; 
+}
+
+.affiliate-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.affiliate-list li {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.join-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.join-section a {
+    text-decoration: none;
 }
 
 /*
