@@ -81,7 +81,7 @@ main {
     color: gold;
     font-size: 1.25rem;
     font-weight: 300;
-    margin-top: 0rem;
+    margin: 0rem 1rem;
     text-align: center;
     line-height: 1.5;
     max-width: 780px;
