@@ -1,12 +1,12 @@
 * {
     box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
 }
 
 body {
-    background-color: Cornsilk;
+    background-color: SteelBlue;
     margin: 0;
-    font-family: Roboto, sans-serif;
-    color: SteelBlue;
+    color: white;
 }
 
 header {
@@ -21,18 +21,18 @@ header {
     z-index: 1000;
 }
 
+/*
 main {
     top: 55px;
-    /*min-height: calc(100vh - 55px);*/
     margin: auto;
     color: SteelBlue;
-    font-family: Roboto, sans-serif;
     justify-content: center;
     text-align: center;
     align-items: center;
     display: block;
     font-size: 1.2rem;
 }
+*/
 
 
 .nav-left, .nav-right {
@@ -46,29 +46,28 @@ main {
     font-size: 1.2rem;
 }
 
-#canvas-container {
-    top: 55px;
-    left: 0;
-    right: 0;
-    position: fixed;
-    max-height: calc(100vh - 55px);
-    width: 100%;
-    aspect-ratio: 1.5555;
-    margin: auto;
-    z-index: 0;
-    display: block;
-    overflow: hidden;
+.hero {
+    margin-top: 55px;                 /* sits just below fixed header   */
+    height: calc(100vh - 55px);       /* fills remaining viewport       */
+    display: flex;
     justify-content: center;
     align-items: center;
+    background-color: SteelBlue;      /* strong contrast for white text */
 }
 
-canvas {
-    width: 100%;
-    padding: 0;
-    height: 100%;
-    display: block;
-    pointer-events: none;
-    margin: auto;
+.hero-title {
+    color: white;
+    font-size: 2.8rem;                /* adjust to taste                */
+    font-weight: 500;
+    margin: 0 1rem;
+}
+
+.about-wrapper {
+    max-width: 800px;
+    margin: 155px auto 0;              /* centred and below header       */
+    padding: 0 2rem;
+    line-height: 1.6;
+    text-align: left;                 /* easier to read than centred     */
 }
 
 .team-wrapper {
@@ -85,6 +84,7 @@ canvas {
     padding: 5px; 
     width: 100%;
     top: 0;
+    color: SteelBlue; 
 }
 
 .team-section h1,
@@ -92,7 +92,6 @@ canvas {
 .join-section h1 {
     font-size: 1.2rem;
     font-weight: normal;
-    font-family: Roboto, sans-serif;
     margin: 3rem 0 1.5rem;
     text-align: center;
 }
@@ -132,47 +131,3 @@ canvas {
     font-size: 0.8rem; 
     margin-bottom: 1rem; 
 }
-.social { 
-    text-decoration: none; 
-    font-size: 0.8rem; 
-}
-
-.affiliate-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.affiliate-list li {
-    margin: 0.5rem 0;
-    line-height: 1.4;
-}
-
-.join-section p {
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-.join-section a {
-    text-decoration: none;
-}
-
-/*
-@media (max-width: 600px) {
-    header {
-        padding: 0.75rem 1rem;
-    }
-    #canvas-container {
-        top: 44px;
-    }
-
-    .nav-left, .nav-right {
-        gap: 0.5rem;
-    }
-
-    .nav-left a, .nav-right a {
-        font-size: 1rem;
-    }
-}
-*/

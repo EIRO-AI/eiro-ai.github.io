@@ -1,0 +1,62 @@
+#canvas-container {
+    top: 55px;
+    left: 0;
+    right: 0;
+    position: fixed;
+    max-height: calc(100vh - 55px);
+    width: 100%;
+    aspect-ratio: 1.5555;
+    margin: auto;
+    z-index: 0;
+    display: block;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+    #canvas-container {
+        top: 44px;
+    }
+
+    .nav-left, .nav-right {
+        gap: 0.5rem;
+    }
+
+    .nav-left a, .nav-right a {
+        font-size: 1rem;
+    }
+}
+
+.affiliate-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.affiliate-list li {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.join-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.join-section a {
+    text-decoration: none;
+}
