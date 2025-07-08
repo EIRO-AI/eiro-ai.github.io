@@ -72,6 +72,10 @@ main {
     line-height: 1.5;
     max-width: 780px;     /* keeps lines readable on big screens */
 }
+
+.hero-email {
+    color: white;
+}
 .hero-footnote {
     color: gold;
     font-size: 1.25rem;
@@ -112,7 +116,7 @@ main {
 .join-section h1 {
     font-size: 1.2rem;
     font-weight: normal;
-    color: white;
+    color: gold;
     margin: 3rem 0 1.5rem;
     text-align: center;
 }
