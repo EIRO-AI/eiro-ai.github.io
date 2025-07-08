@@ -50,6 +50,7 @@ main {
     margin-top: 55px;                 /* sits just below fixed header   */
     height: calc(100vh - 55px);       /* fills remaining viewport       */
     display: flex;
+    flex-direction: column;   /* <-- stack items top-to-bottom */
     justify-content: center;
     align-items: center;
     background-color: SteelBlue;      /* strong contrast for white text */
@@ -62,12 +63,31 @@ main {
     margin: 0 1rem;
 }
 
+.hero-subtitle {
+    color: white;
+    font-size: 1.25rem;   /* ≈20 px – scale down for phones if needed */
+    font-weight: 300;     /* lighter than the headline */
+    margin-top: 1rem;     /* gap under the h1 */
+    text-align: center;
+    line-height: 1.5;
+    max-width: 780px;     /* keeps lines readable on big screens */
+}
+.hero-footnote {
+    color: gold;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0rem;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 780px;
+}
+
 .about-wrapper {
     max-width: 800px;
     margin: 155px auto 0;              /* centred and below header       */
     padding: 0 2rem;
     line-height: 1.6;
-    text-align: left;                 /* easier to read than centred     */
+    text-align: center;                 /* easier to read than centred     */
 }
 
 .team-wrapper {
