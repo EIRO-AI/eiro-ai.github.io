@@ -60,6 +60,7 @@ main {
     color: white;
     font-size: 2.8rem;                /* adjust to taste                */
     font-weight: 500;
+    text-align: center; 
     margin: 0 1rem;
 }
 
@@ -67,7 +68,7 @@ main {
     color: white;
     font-size: 1.25rem;   /* ≈20 px – scale down for phones if needed */
     font-weight: 300;     /* lighter than the headline */
-    margin-top: 1rem;     /* gap under the h1 */
+    margin: 1rem 1rem;
     text-align: center;
     line-height: 1.5;
     max-width: 700px;     /* keeps lines readable on big screens */
