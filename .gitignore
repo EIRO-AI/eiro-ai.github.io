@@ -23,11 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Package manager lock files (include these for consistent installs)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
 # Environment variables
 .env
 .env.local
@@ -38,3 +33,6 @@ pnpm-lock.yaml
 # Build outputs
 build/
 dist/
+
+# Wrong workflow location (should be deleted manually)
+workflows/
